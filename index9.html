@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<div>
+    <label>
+        Nhập số a
+        <input type="number" id="input9a" placeholder="Nhập dữ liệu A">
+    </label>
+    <br>
+    <label>
+        Nhập số b
+        <input type="number" id="input9b" placeholder="Nhập dữ liệu B">
+    </label>
+    <br>
+    <label>
+        Nhập số c
+        <input type="number" id="input9c" placeholder="Nhập dữ liệu C">
+    </label>
+    <br>
+</div>
+<div id="result" onclick="result()">
+    <button>Click</button>
+</div>
+<script>
+    function result() {
+        let a = document.getElementById('input9a').value
+        let b = document.getElementById('input9b').value
+        let c = document.getElementById('input9c').value
+        if ((a,b,c > 0) || (a + b > c) || (b + c > a) || (a + c > b)) {
+            document.getElementById('result').innerHTML = 'a,b,c là cạnh của tam giác'
+        }else {
+            document.getElementById('result').innerHTML = 'a,b,c không là cạnh của tam giác'
+        }
+    }
+</script>
+</body>
+</html>

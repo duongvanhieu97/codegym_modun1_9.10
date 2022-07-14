@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<div>
+    <label>
+        Nhập a
+        <input type="number" placeholder="Nhập số a" id="inputa">
+    </label>
+    <label>
+        Nhập b
+        <input type="number" placeholder="Nhập số a" id="inputb">
+    </label>
+</div>
+<div id="result" onclick="result()">
+    <button>Click</button>
+</div>
+<script>
+    function result() {
+        let a = Number(document.getElementById('inputa').value)
+        let b = Number(document.getElementById('inputb').value)
+        if (a === 0 || b === 0) {
+            document.getElementById('result').innerHTML = 'Phương trình vô nghiệm'
+        } else {
+            document.getElementById('result').innerHTML = 'X = ' + (-b / a)
+        }
+    }
+</script>
+</body>
+</html>

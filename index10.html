@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<div>
+    <label>
+        <input type="number" placeholder="Nhập số điện" id="input10">
+    </label>
+</div>
+<div id="result" onclick="result()">
+    <button>Click</button>
+</div>
+<script>
+    function result() {
+        let input10 = document.getElementById('input10').value
+        if (input10 <= 50) {
+            document.getElementById('result').innerHTML = 'Tổng =' + input10*1500 + 'Đ'
+        }else if (input10 <= 100){
+            document.getElementById('result').innerHTML = 'Tổng =' + (50*1500 + (input10-50)*1700 ) + 'Đ'
+        }else if (input10 <= 200) {
+            document.getElementById('result').innerHTML = 'Tổng =' + (50*1500 + 50*1700 + (input10-100) *2000 )+ 'Đ'
+        }else if (input10 <= 300) {
+            document.getElementById('result').innerHTML = 'Tổng =' + (50*1500 + 50*1700 + 100 *2000 + (input10-200) * 2500 )+ 'Đ'
+        }else if (input10 <= 400) {
+            document.getElementById('result').innerHTML = 'Tổng =' + (50*1500 + 50*1700 + 100 *2000 + 100 * 2500 + (input10-300)*2800 )+ 'Đ'
+        }else {
+            document.getElementById('result').innerHTML = 'Tổng =' + (50*1500 + 50*1700 + 100 *2000 + 100 * 2500 + 100*2800 + (input10-400)*3000 )+ 'Đ'
+        }
+    }
+</script>
+</body>
+</html>

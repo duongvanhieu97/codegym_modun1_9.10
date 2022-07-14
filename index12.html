@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<div>
+    <label>
+        Nhập số tiền:
+        <input type="number" id="p" placeholder="Nhập dữ liệu">
+    </label>
+    <br>
+    <label>
+        Nhập lãi suất:
+        <input type="number" id="i" placeholder="Nhập dữ liệu">
+    </label>
+    <br>
+    <label>
+        Nhập số năm gửi lãi:
+        <input type="number" id="n" placeholder="Nhập dữ liệu">
+    </label>
+    <br>
+</div>
+<div onclick="result()" id="result">
+    <button>Click</button>
+</div>
+<script>
+    function result() {
+        let p = document.getElementById('p').value
+        let i = document.getElementById('i').value
+        let n = document.getElementById('n').value
+        let m = Number(prompt('Kỳ hạn mỗi lần lấy lãi'))
+        if (m === 3) {
+            document.getElementById('result').innerHTML = 'Tổng =' + (p*(1+i/3)**(n-3))
+        }else {
+            document.getElementById('result').innerHTML = 'Tổng =' + (p*(1+i/m)**(n-m))
+        }
+    }
+</script>
+</body>
+</html>

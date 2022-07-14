@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<div>
+    <label>
+        Nhập số tiền TNCN
+        <input type="number" id="input11" placeholder="Nhập dữ liệu">
+    </label>
+</div>
+<div onclick="result()" id="result">
+    <button>Click</button>
+</div>
+<script>
+    function result() {
+        let tien = document.getElementById('input11').value
+        if (tien <=5) {
+            document.getElementById('result').innerHTML = 'Thuế = ' + tien*(5/100) + 'Triệu Đ'
+        }else if (tien <= 10) {
+            document.getElementById('result').innerHTML = 'Thuế = ' + tien*(10/100) + 'Triệu Đ'
+        }else if (tien <= 18) {
+            document.getElementById('result').innerHTML = 'Thuế = ' + tien*(15/100) + 'Triệu Đ'
+        }else if (tien <= 32) {
+            document.getElementById('result').innerHTML = 'Thuế = ' + tien*(20/100) + 'Triệu Đ'
+        }else if (tien <= 52) {
+            document.getElementById('result').innerHTML = 'Thuế = ' + tien*(25/100) + 'Triệu Đ'
+        }else if (tien <= 80) {
+            document.getElementById('result').innerHTML = 'Thuế = ' + tien*(30/100) + 'Triệu Đ'
+        }else {
+            document.getElementById('result').innerHTML = 'Thuế = ' + tien*(35/100) + 'Triệu Đ'
+        }
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<div>
+    <label>
+        Nhập độ C
+        <input type="text" id="input1" placeholder="Nhập độ C">
+    </label>
+</div>
+<div id="result" onclick="result()">
+    <button>Click</button>
+</div>
+<script>
+    function result() {
+        let input = Number(document.getElementById('input1').value)
+        document.getElementById('result').innerHTML = 'F=' + (input*9/5 +32)
+    }
+</script>
+</body>
+</html>

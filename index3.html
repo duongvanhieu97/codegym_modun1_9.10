@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<div>
+    <label>
+        Cạnh hình vuông:
+        <input type="number" placeholder="Nhập dữ liệu" id="input3">
+    </label>
+</div>
+<div id="result" onclick="result()">
+    <button>Click</button>
+</div>
+<script>
+    function result() {
+        let a = Number(document.getElementById('input3').value)
+        document.getElementById('result').innerHTML = 'Diện tích hình vuông = ' + (a ** 2)
+    }
+</script>
+</body>
+</html>
